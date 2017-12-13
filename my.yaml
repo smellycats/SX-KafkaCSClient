@@ -1,0 +1,11 @@
+kafka_producer:
+  services: 10.47.223.123:9092, 10.47.223.124:9092, 10.47.223.125:9092
+  topic: cs_hcq2
+kafka_consumer:
+  services: 10.47.223.123:9092, 10.47.223.124:9092, 10.47.223.125:9092
+  groupid: cs_hcq_proxy
+  topic: cs_hcq
+consul:
+  ttl: 30
+  lock_name: kafka-cs-hcq-lock
+  path: kafka/cs/hcq/
