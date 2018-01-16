@@ -1,4 +1,4 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 import time
 import json
 import socket
@@ -91,7 +91,7 @@ class UploadData(object):
                         'fxbh_id': int(i['FXBH']),
                         'jgsj': arrow.get(i['JGSJ'], 'YYYY/MM/DD/HH/mm/ss').format('YYYY-MM-DD HH:mm:ss'),
                         'cdbh': int(i['CDBH']),
-                        'hphm': i['HPHM'],
+                        'hphm': i['HPHM'].encode('utf-8').decode('unicode_escape'),
                         'hpys_id': int(i['HPYS']),
                         'clsd': i['CLSD'],
                         'clxs': i['CLXS'],
